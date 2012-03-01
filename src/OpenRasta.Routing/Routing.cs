@@ -8,21 +8,28 @@ namespace OpenRasta.Routing
 {
     public class Routing
     {
-        public static void Register(Assembly controllerAssembly)
+        public static void Register(Assembly handlerAssembly, Assembly modelAssembly)
         {
-            Register(new[] { controllerAssembly });
+            Register(new[] { handlerAssembly }, new[] { modelAssembly });
         }
 
-        public static void Register(Assembly[] controllerAssemblies)
+        public static void Register(Assembly[] handlerAssemblies, Assembly[] modelAssemblies)
         {
             foreach (
-                var typedRoute in
-                    controllerAssemblies.SelectMany(a => a.GetTypes()).Select(GetBaseRouteAttributeFor).SelectMany(
+                var route in
+                    handlerAssemblies.SelectMany(a => a.GetTypes()).Select(GetBaseRouteAttributeFor).SelectMany(
                         routeInfo => routeInfo))
             {
                 ResourceSpace.Has.ResourcesOfType<object>()
-                    .AtUri(typedRoute.Route).Named(typedRoute.Name)
-                    .HandledBy(typedRoute.HandlerType)
+                    .AtUri(route.Route).Named(route.Name)
+                    .HandledBy(route.HandlerType)
+                    .AsJsonDataContract()
+                    .And.AsXmlDataContract();
+            }
+            foreach (var type in modelAssemblies.SelectMany(x => x.GetTypes()))
+            {
+                ResourceSpace.Has.ResourcesOfType(type)
+                    .WithoutUri
                     .AsJsonDataContract()
                     .And.AsXmlDataContract();
             }
