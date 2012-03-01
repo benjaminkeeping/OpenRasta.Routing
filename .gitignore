@@ -2,9 +2,9 @@ src/_ReSharper.OpenRasta.Routing
 src/OpenRasta.Routing/bin
 src/OpenRasta.Routing/obj
 src/OpenRasta.Routing.suo
-build/build_log.txt
-build/lib
-deploy
 src/OpenRasta.Routing.Specs/bin
 src/OpenRasta.Routing.Specs/obj
 src/OpenRasta.Routing.6.0.ReSharper.user
+build/build_log.txt
+build/lib
+deploy

@@ -6,7 +6,7 @@ So instead of registering routes like this :
   using (OpenRastaConfiguration.Manual)
   {
 
-  	ResourceSpace.Has.ResourcesOfType<object>()
+    ResourceSpace.Has.ResourcesOfType<object>()
       .AtUri("/foo/{id}").Named("view-foo")
       .HandledBy<FooHandler>()
       .AsJsonDataContract()
@@ -18,7 +18,7 @@ You can just call :
   using (OpenRastaConfiguration.Manual)
   {
   	// Register all handler's routes in given assembly(s)
-		Routing.Register(typeof(FooHandler).Assembly);
+	Routing.Register(typeof(FooHandler).Assembly);
 	}
 
 And then tag your handlers : 

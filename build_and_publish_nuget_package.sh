@@ -24,7 +24,6 @@ then
 	exit -1
 fi
 
-# increment build version number
 currentVersion=`grep version $package_spec_file | cut -d '>' -f2 | cut -d '<' -f1`
 echo "Current assembly version $currentVersion"
 let patch=`echo $currentVersion | cut -d '.' -f4`+1
