@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenRasta.Routing", "OpenRasta.Routing\OpenRasta.Routing.csproj", "{D7BB9FE0-AE1A-49E0-A96C-1645C7CF9535}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenRasta.Routing.Specs", "OpenRasta.Routing.Specs\OpenRasta.Routing.Specs.csproj", "{33326D21-44B8-4BFE-B19F-93AADD8E3D17}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,16 @@ Global
 		{D7BB9FE0-AE1A-49E0-A96C-1645C7CF9535}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{D7BB9FE0-AE1A-49E0-A96C-1645C7CF9535}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{D7BB9FE0-AE1A-49E0-A96C-1645C7CF9535}.Release|x86.ActiveCfg = Release|Any CPU
+		{33326D21-44B8-4BFE-B19F-93AADD8E3D17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33326D21-44B8-4BFE-B19F-93AADD8E3D17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33326D21-44B8-4BFE-B19F-93AADD8E3D17}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{33326D21-44B8-4BFE-B19F-93AADD8E3D17}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{33326D21-44B8-4BFE-B19F-93AADD8E3D17}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{33326D21-44B8-4BFE-B19F-93AADD8E3D17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33326D21-44B8-4BFE-B19F-93AADD8E3D17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33326D21-44B8-4BFE-B19F-93AADD8E3D17}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{33326D21-44B8-4BFE-B19F-93AADD8E3D17}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{33326D21-44B8-4BFE-B19F-93AADD8E3D17}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
