@@ -1,0 +1,37 @@
+This dll takes some of the pain away from registering routes in OpenRasta.
+It's on Nuget as "OpenRasta.Routing"
+
+So instead of registering routes like this :
+
+  using (OpenRastaConfiguration.Manual)
+  {
+
+  	ResourceSpace.Has.ResourcesOfType<object>()
+      .AtUri("/foo/{id}").Named("view-foo")
+      .HandledBy<FooHandler>()
+      .AsJsonDataContract()
+      .And.AsXmlDataContract();
+  }
+
+You can just call :
+
+  using (OpenRastaConfiguration.Manual)
+  {
+  	// Register all handler's routes in given assembly(s)
+		Routing.Register(typeof(FooHandler).Assembly);
+	}
+
+And then tag your handlers : 
+
+    public class FooHandler 
+    {
+        [Get("/foo/{id}")]
+        public OperationResult Foo()
+        {
+            return new OperationResult.OK
+            {
+                ResponseResource = new Foo()
+            };
+        }
+
+There are attributes for Get, Post, Put, Patch and Delete

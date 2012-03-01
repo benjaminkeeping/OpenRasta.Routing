@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>OpenRasta.Routing</id>
+    <version>1.0.0.0</version>
+    <authors>Ben Keeping</authors>
+    <owners>Ben Keeping</owners>
+    <projectUrl>https://github.com/benjaminkeeping/OpenRasta.Routing</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Register routes with OpenRasta using attributes on your handlers, instead of manually via OR onfiguration</description>
+    <releaseNotes>init</releaseNotes>
+    <copyright>Copyright benkeeping 2012</copyright>
+    <tags>OpenRasta Routing Attributes</tags>
+  </metadata>
+</package>
