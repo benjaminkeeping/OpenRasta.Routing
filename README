@@ -16,9 +16,9 @@ So instead of registering routes like this :
 You can just call :
 
   using (OpenRastaConfiguration.Manual)
-  {
-  	// Register all handler's routes in given assembly(s)
-	Routing.Register(typeof(FooHandler).Assembly);
+	{
+		// Register all handler's routes in given assembly(s), and all model/wire types in given assembly(s)
+		Routing.Register(typeof(FooHandler).Assembly, typeof(Foo).Assembly);
 	}
 
 And then tag your handlers : 
