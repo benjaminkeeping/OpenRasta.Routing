@@ -5,9 +5,8 @@ namespace OpenRasta.Routing
     public class GetAttribute : BaseRouteAttribute
     {
         public GetAttribute(string route)
-            : base(route)
+            : base(route, "GET")
         {
-            Method = "GET";
         }
     }
 }

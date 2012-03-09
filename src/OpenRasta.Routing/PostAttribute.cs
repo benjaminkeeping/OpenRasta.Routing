@@ -3,9 +3,8 @@ namespace OpenRasta.Routing
     public class PostAttribute : BaseRouteAttribute
     {
         public PostAttribute(string route)
-            : base(route)
+            : base(route, "POST")
         {
-            Method = "POST";
         }
     }
 }

@@ -3,9 +3,8 @@ namespace OpenRasta.Routing
     public class DeleteAttribute : BaseRouteAttribute
     {
         public DeleteAttribute(string route)
-            : base(route)
+            : base(route, "DELETE")
         {
-            Method = "DELETE";
         }
     }
 }
