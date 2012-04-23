@@ -30,7 +30,7 @@ namespace OpenRasta.Routing
             foreach (
                 var route in
                     handlerAssemblies.SelectMany(a => a.GetTypes()).Select(GetBaseRouteAttributeFor).SelectMany(
-                        routeInfo => routeInfo))
+                        routeInfo => routeInfo).OrderByDescending(x => x.Route))
             {
                 Debug.WriteLine(string.Format("[OpenRasta.Routing] Registering route '{0}' named '{1}' with handler '{2}'", route.Route, route.Name, route.HandlerType));
                 ResourceSpace.Has.ResourcesOfType(route.HandlerType)
@@ -41,6 +41,7 @@ namespace OpenRasta.Routing
             }
             foreach (var type in modelAssemblies.SelectMany(x => x.GetTypes()))
             {
+                Debug.WriteLine(string.Format("[OpenRasta.Routing] Registering  type '{0}'", type));
                 ResourceSpace.Has.ResourcesOfType(type)
                     .WithoutUri
                     .AsJsonDataContract()
