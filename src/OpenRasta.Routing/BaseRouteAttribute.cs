@@ -8,10 +8,11 @@ namespace OpenRasta.Routing
     {
         readonly string _route;
         
-        protected BaseRouteAttribute(string route)
+        protected BaseRouteAttribute(string route, string method)
         {
             _route = route;
-            ForUriName = GetNamrFrom(route);
+            ForUriName = string.Format("{0}-{1}", GetNamrFrom(route), method);
+            Method = method;
         }
 
         string GetNamrFrom(string route)
